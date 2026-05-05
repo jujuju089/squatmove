@@ -124,10 +124,10 @@ async function detect() {
                 let dist = ankle.y - hip.y;
 
                 // Dynamische Schwellenwerte für Squat
-                if (dist < 230) { 
+                if (dist < 400) { 
                     stage = 'down';
                     statusLabel.innerText = "STATUS: Squat tief";
-                } else if (dist > 280 && stage === 'down') {
+                } else if (dist > 500 && stage === 'down') {
                     count++;
                     counterLabel.innerText = count;
                     stage = 'up';
